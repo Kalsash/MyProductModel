@@ -20,7 +20,7 @@ namespace MyProductModel
             InitializeComponent();
             richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Bold);
             this.Load += Form_Load;
-           // Initialize();
+            Initialize();
 
         }
         public void Initialize ()

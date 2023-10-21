@@ -1,3 +1,5 @@
+ForwardingSolve started...
+
 Для_игр => AmdRyzon7
 Для_игр => 3050Ti
 Для_игр => CoolSound
@@ -11,3 +13,8 @@ GIGABYTEPlate, CoolSound, 1TB => 2000$
 2000$ => AsusGameTuf
 2000$ => Acer
 1000$ => Lenovo
+
+Found 3 Laptops: 
+AsusGameTuf
+Acer
+Lenovo

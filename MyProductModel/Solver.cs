@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -12,7 +13,6 @@ namespace MyProductModel
 {
     internal class Solver
     {
-        private RichTextBox richTextBox; // Объявление переменной типа RichTextBox
 
         Facts facts { get; set; }
         Productions rules { get; set; }
@@ -20,6 +20,8 @@ namespace MyProductModel
         TaskManager tasks { get; set; }
 
         HashSet<string> Path = new HashSet<string>();
+
+        HashSet<string> Logs = new HashSet<string>();
 
         HashSet<string> Result = new HashSet<string>();
 
@@ -95,12 +97,21 @@ namespace MyProductModel
                 cnt = Path.Count;
                 FixPath();
             }
-            Console.WriteLine("Solving Path: ");
             var temp = "";
+            foreach (var item in Logs)
+            {
+                temp += item + "\n";
+            }
+            temp += "\n";
             foreach (string item in Path)
             {
                 Console.WriteLine(item.Replace(", =>", " =>"));
                 temp += item.Replace(", =>", " =>") + "\n"; 
+            }
+            temp += "\n"+ "Found " + Result.Count + " Laptops: " + "\n";
+            foreach (var item in Result)
+            {
+                temp += item + "\n";
             }
             // Запись строки в файл
             File.WriteAllText("../../result.txt", temp);
@@ -202,6 +213,7 @@ namespace MyProductModel
                     
                 }
             }
+          
             if (Result.Count != 0)
             {
                 return true;
@@ -225,18 +237,11 @@ namespace MyProductModel
         public void Run() 
         {
 
-            //richTextBox = Form1.GetTextBox();
-            //Console.WriteLine("Searching...");
-
             if (ForwardingSolve())
                 {
-                   // Console.WriteLine("ForwardingSolve");
-                       // PrintPath();
-                   // Console.WriteLine("Found " + Result.Count + " Laptops: ");
-                    //foreach (var item in Result)
-                    //{
-                    //    Console.WriteLine(item + " ");
-                    //}
+
+                Logs.Add("ForwardingSolve started...");
+                       PrintPath();
                 }
                 else
                 {
