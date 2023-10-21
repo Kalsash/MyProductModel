@@ -59,9 +59,8 @@ namespace MyProductModel
 
         }
 
-        private void Click()
+        private void MyClick()
         {
-            Initialize();
             // Получение выбранных элементов
             List<object> selectedItems = new List<object>();
 
@@ -72,11 +71,19 @@ namespace MyProductModel
 
             // Преобразование выбранных элементов в массив строк, если нужно
             string[] selectedValues = selectedItems.Select(item => item.ToString()).ToArray();
+            var temp = "";
+            foreach (string value in selectedValues)
+            {
+                temp += value + ",";
+            }
+
+            File.WriteAllText("../../facts.txt", temp);
+            Initialize();
 
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Initialize();
+            MyClick();
             string filePath = "../../result.txt"; // Замените на путь к вашему файлу
 
             try

@@ -72,11 +72,11 @@
             // 
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
-            "Для игр",
-            "Для офисной работы",
-            "Для монтажа",
-            "Для музыки",
-            "Для программирования"});
+            "Для_игр",
+            "Для_офисной_работы",
+            "Для_монтажа",
+            "Для_музыки",
+            "Для_программирования"});
             this.checkedListBox1.Location = new System.Drawing.Point(146, 77);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(206, 106);
