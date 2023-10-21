@@ -20,7 +20,7 @@ namespace MyProductModel
             InitializeComponent();
             richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Bold);
             this.Load += Form_Load;
-            Initialize();
+            
 
         }
         public void Initialize ()
@@ -40,24 +40,8 @@ namespace MyProductModel
         }
         public void Form_Load(object sender, EventArgs e)
         {
-            string filePath = "../../result.txt"; // Замените на путь к вашему файлу
-
-            try
-            {
-                // Читаем содержимое файла
-                string fileContent = File.ReadAllText(filePath);
-
-                // Отображаем содержимое файла в TextBox
-                richTextBox1.Text = fileContent;
-
-               // Устанавливаем свойство ReadOnly в true
-               richTextBox1.ReadOnly = true;
-            }
-            catch (Exception ex)
-            {
-                // В случае ошибки выводим сообщение
-                MessageBox.Show("Ошибка при чтении файла: " + ex.Message);
-            }
+            richTextBox1.Text = "Здесь будет отображаться вывод";
+          
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -73,6 +57,50 @@ namespace MyProductModel
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Click()
+        {
+            Initialize();
+            // Получение выбранных элементов
+            List<object> selectedItems = new List<object>();
+
+            foreach (object selectedItem in checkedListBox1.CheckedItems)
+            {
+                selectedItems.Add(selectedItem);
+            }
+
+            // Преобразование выбранных элементов в массив строк, если нужно
+            string[] selectedValues = selectedItems.Select(item => item.ToString()).ToArray();
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Initialize();
+            string filePath = "../../result.txt"; // Замените на путь к вашему файлу
+
+            try
+            {
+                // Читаем содержимое файла
+                string fileContent = File.ReadAllText(filePath);
+
+                // Отображаем содержимое файла в TextBox
+                richTextBox1.Text = fileContent;
+
+                // Устанавливаем свойство ReadOnly в true
+                richTextBox1.ReadOnly = true;
+            }
+            catch (Exception ex)
+            {
+                // В случае ошибки выводим сообщение
+                MessageBox.Show("Ошибка при чтении файла: " + ex.Message);
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
         }
     }
 }
