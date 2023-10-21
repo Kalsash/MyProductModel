@@ -29,7 +29,6 @@ namespace MyProductModel
             Productions ps = new Productions("../../rules.txt");
             TaskManager tm = new TaskManager("../../tasks.txt");
             Solver s = new Solver(facts, ps, tm);
-            s.PrintInfo();
             s.Run();
            
         }

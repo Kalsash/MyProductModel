@@ -245,8 +245,8 @@ namespace MyProductModel
                 }
                 else
                 {
-                    //Console.WriteLine("Laptops were not found");
-                }
+                File.WriteAllText("../../result.txt", "Not found any laptops with this params");
+              }
                 //if (ReverseSolve(t))
                 //{
                 //    Console.WriteLine("ReverseSolve");
