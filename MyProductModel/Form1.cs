@@ -15,6 +15,7 @@ namespace MyProductModel
 {
     public partial class Form1 : Form
     {
+        int IsForward = 0;
         public Form1()
         {
             InitializeComponent();
@@ -28,8 +29,8 @@ namespace MyProductModel
             Facts facts = new Facts("../../facts.txt");
             Productions ps = new Productions("../../rules.txt");
             TaskManager tm = new TaskManager("../../tasks.txt");
-            Solver s = new Solver(facts, ps, tm);
-            s.Run();
+             Solver s = new Solver(facts, ps, tm);
+            s.Run(IsForward);
            
         }
 
@@ -66,6 +67,31 @@ namespace MyProductModel
             foreach (object selectedItem in checkedListBox1.CheckedItems)
             {
                 selectedItems.Add(selectedItem);
+            }
+            foreach (object selectedItem in checkedListBox2.CheckedItems)
+            {
+                selectedItems.Add(selectedItem);
+            }
+            foreach (object selectedItem in checkedListBox3.CheckedItems)
+            {
+                selectedItems.Add(selectedItem);
+            }
+            foreach (object selectedItem in checkedListBox4.CheckedItems)
+            {
+                selectedItems.Add(selectedItem);
+            }
+            foreach (object selectedItem in checkedListBox5.CheckedItems)
+            {
+                selectedItems.Add(selectedItem);
+            }
+            foreach (object selectedItem in checkedListBox1.CheckedItems)
+            {
+                if (selectedItem.ToString() == "Обратный")
+                {
+                    IsForward = 1;
+                }
+                else
+                    IsForward = 0;
             }
 
             // Преобразование выбранных элементов в массив строк, если нужно

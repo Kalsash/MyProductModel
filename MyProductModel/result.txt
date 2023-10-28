@@ -1,22 +1,10 @@
 ForwardingSolve started...
 
-Для_игр => AmdRyzon7
-Для_монтажа => Mac
-Для_игр => 3050Ti
-Для_игр => CoolSound
-Для_игр => 1TB
-Для_игр => 16ГБОЗУ
-Для_офисной_работы => Pentium2
-Для_офисной_работы => 8ГБОЗУ
-Pentium2, 8ГБОЗУ => 1000$
-AmdRyzon7, 3050Ti, 16ГБОЗУ => GIGABYTEPlate
-GIGABYTEPlate, CoolSound, 1TB => 2000$
-2000$ => AsusGameTuf
-2000$ => Acer
-1000$ => Lenovo
+16_ядер => AMDRyzen9
+64ГБ => Corsar64GB
+4070 => GeForce4070
+4000$ => 3000$-4000$
+AMDRyzen9, GeForce4070, Corsar64GB, 3000$-4000$, наличие_не_важно => Predator4100
 
-Found 4 Laptops: 
-Mac
-AsusGameTuf
-Acer
-Lenovo
+Found 1 Laptops: 
+Predator4100

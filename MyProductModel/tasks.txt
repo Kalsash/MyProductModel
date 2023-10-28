@@ -1,1 +1,1 @@
-AsusGameTuf, Lenovo, Xiaomi, Acer, Mac
+MsiTitanGT77,Predator4100,AcerA515,Slealth14,AsusGameTuf,LenovoFX203,HuaweiMateBook,Corebook14,AcerExtensa15,LenovoIdeaPad

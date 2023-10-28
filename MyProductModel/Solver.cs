@@ -234,29 +234,33 @@ namespace MyProductModel
             }
             Path.Clear();
         }
-        public void Run() 
+        public void Run(int k) 
         {
-
-            if (ForwardingSolve())
+            if (k == 0)
+            {
+                if (ForwardingSolve())
                 {
 
-                Logs.Add("ForwardingSolve started...");
-                       PrintPath();
+                    Logs.Add("ForwardingSolve started...");
+                    PrintPath();
                 }
                 else
                 {
-                File.WriteAllText("../../result.txt", "Not found any laptops with this params");
-              }
-                //if (ReverseSolve(t))
-                //{
-                //    Console.WriteLine("ReverseSolve");
-                //    Console.WriteLine("Task " + t + " was solved");
-                //    PrettyPrint();
-                //   // Console.WriteLine(Path.First());
-                //    facts.AddFact(t);
-                //    tasks.RemoveTask(t);
-                //}
-           // Console.WriteLine("End");
+                    File.WriteAllText("../../result.txt", "Not found any laptops with this params");
+                }
+            }
+
+            else
+            //    if (ReverseSolve(t))
+            //{
+            //    Console.WriteLine("ReverseSolve");
+            //    Console.WriteLine("Task " + t + " was solved");
+            //    PrettyPrint();
+            //    // Console.WriteLine(Path.First());
+            //    facts.AddFact(t);
+            //    tasks.RemoveTask(t);
+            //}
+            Console.WriteLine("End");
 
         }
     }

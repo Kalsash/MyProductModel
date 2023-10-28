@@ -72,21 +72,22 @@
             // 
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
-            "Для_игр",
-            "Для_офисной_работы",
-            "Для_монтажа",
-            "Для_музыки",
-            "Для_программирования"});
+            "2_ядра",
+            "4_ядра",
+            "6_ядер",
+            "8_ядер",
+            "12_ядер",
+            "16_ядер"});
             this.checkedListBox1.Location = new System.Drawing.Point(146, 77);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(206, 106);
+            this.checkedListBox1.Size = new System.Drawing.Size(139, 106);
             this.checkedListBox1.TabIndex = 3;
             this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(143, 58);
+            this.label2.Location = new System.Drawing.Point(86, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(256, 16);
             this.label2.TabIndex = 4;
@@ -96,18 +97,20 @@
             // 
             this.checkedListBox2.FormattingEnabled = true;
             this.checkedListBox2.Items.AddRange(new object[] {
-            "7 часов",
-            "5 часов",
-            "3 часа "});
-            this.checkedListBox2.Location = new System.Drawing.Point(449, 77);
+            "4070",
+            "3050",
+            "2050",
+            "1650",
+            "встроенная"});
+            this.checkedListBox2.Location = new System.Drawing.Point(374, 96);
             this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(165, 72);
+            this.checkedListBox2.Size = new System.Drawing.Size(165, 89);
             this.checkedListBox2.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(446, 58);
+            this.label3.Location = new System.Drawing.Point(371, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(220, 16);
             this.label3.TabIndex = 6;
@@ -117,12 +120,11 @@
             // 
             this.checkedListBox3.FormattingEnabled = true;
             this.checkedListBox3.Items.AddRange(new object[] {
-            "Acer",
-            "Asus",
-            "Lenovo",
-            "Xiaomi",
-            "Mac"});
-            this.checkedListBox3.Location = new System.Drawing.Point(713, 77);
+            "4000$",
+            "3000$",
+            "2000$",
+            "1000$"});
+            this.checkedListBox3.Location = new System.Drawing.Point(600, 96);
             this.checkedListBox3.Name = "checkedListBox3";
             this.checkedListBox3.Size = new System.Drawing.Size(165, 89);
             this.checkedListBox3.TabIndex = 7;
@@ -130,7 +132,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(710, 58);
+            this.label4.Location = new System.Drawing.Point(611, 77);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(207, 16);
             this.label4.TabIndex = 8;
@@ -140,10 +142,8 @@
             // 
             this.checkedListBox4.FormattingEnabled = true;
             this.checkedListBox4.Items.AddRange(new object[] {
-            "Огромный",
-            "Большой",
-            "Средний ",
-            "Маленький"});
+            "есть_в_наличии",
+            "наличие_не_важно"});
             this.checkedListBox4.Location = new System.Drawing.Point(156, 257);
             this.checkedListBox4.Name = "checkedListBox4";
             this.checkedListBox4.Size = new System.Drawing.Size(165, 72);
@@ -162,17 +162,20 @@
             // 
             this.checkedListBox5.FormattingEnabled = true;
             this.checkedListBox5.Items.AddRange(new object[] {
-            "Intel",
-            "AMD"});
-            this.checkedListBox5.Location = new System.Drawing.Point(954, 257);
+            "64ГБ",
+            "32ГБ",
+            "16ГБ",
+            "8ГБ",
+            "4ГБ"});
+            this.checkedListBox5.Location = new System.Drawing.Point(848, 111);
             this.checkedListBox5.Name = "checkedListBox5";
-            this.checkedListBox5.Size = new System.Drawing.Size(152, 55);
+            this.checkedListBox5.Size = new System.Drawing.Size(152, 89);
             this.checkedListBox5.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(930, 238);
+            this.label6.Location = new System.Drawing.Point(866, 77);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(232, 16);
             this.label6.TabIndex = 12;

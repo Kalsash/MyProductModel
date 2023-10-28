@@ -23,6 +23,10 @@ namespace MyProductModel
                 string line;
                 while ((line = rules.ReadLine()) != null)
                 {
+                    if (line == "")
+                    {
+                        break;
+                    }
                     line = line.Replace(" ", "");
                     int ind = line.IndexOf('=');
                     string key = line.Substring(0, ind);
