@@ -1,10 +1,30 @@
 ForwardingSolve started...
 
 16_ядер => AMDRyzen9
+12_ядер => AMDRyzen7
+8_ядер => AMDRyzen5
+4_ядра => IntelCorei3
 64ГБ => Corsar64GB
 4070 => GeForce4070
+3050 => GeForce3050
+2050 => GeForce2050
+1650 => GeForce1650
+1000$ => 0$-1000$
+2000$ => 1000$-2000$
+3000$ => 2000$-3000$
 4000$ => 3000$-4000$
-AMDRyzen9, GeForce4070, Corsar64GB, 3000$-4000$, наличие_не_важно => Predator4100
+AMDRyzen9, GeForce4070, Corsar64GB, 3000$-4000$ => Predator4100
+AMDRyzen7, GeForce3050, 32ГБ, 2000$-3000$ => AsusGameTuf
+AMDRyzen5, GeForce2050, 16ГБ, 1000$-2000$ => HuaweiMateBook
+IntelCorei3, GeForce1650, 8ГБ, 0$-1000$ => Corebook14
+подсветка_клавиатуры_не_нужна, ОС_не_нужна, доп_usb_не_нужен, запасной_аккумулятор_не_нужен, гарнитура_не_нужна, охлаждающая_подставка, чехол, сумка_для_ноутбука => с_сумкой_для_ноутбука_и_чехлом_и_подставкой
+Predator4100, с_сумкой_для_ноутбука_и_чехлом_и_подставкой => Predator4100Large
+AsusGameTuf, с_сумкой_для_ноутбука_и_чехлом_и_подставкой => AsusGameTufGreat
+HuaweiMateBook, с_сумкой_для_ноутбука_и_чехлом_и_подставкой => HuaweiMateBookBasePro
+Corebook14, с_сумкой_для_ноутбука_и_чехлом_и_подставкой => Corebook14Pro
 
-Found 1 Laptops: 
-Predator4100
+Found 4 Laptops: 
+Predator4100Large
+AsusGameTufGreat
+HuaweiMateBookBasePro
+Corebook14Pro

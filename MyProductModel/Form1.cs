@@ -58,8 +58,7 @@ namespace MyProductModel
         {
 
         }
-
-        private void MyClick()
+            private void MyClick()
         {
             // Получение выбранных элементов
             List<object> selectedItems = new List<object>();
@@ -79,6 +78,37 @@ namespace MyProductModel
             foreach (object selectedItem in checkedListBox4.CheckedItems)
             {
                 selectedItems.Add(selectedItem);
+            }
+
+            Dictionary<string, string> NotDict = new Dictionary<string, string>();
+            using (StreamReader rules = new StreamReader("../../not.txt"))
+            {
+                string line;
+                while ((line = rules.ReadLine()) != null)
+                {
+                    if (line == "")
+                    {
+                        break;
+                    }
+                    line = line.Replace(" ", "");
+                    int ind = line.IndexOf('=');
+                    string key = line.Substring(0, ind);
+                    string val = line.Substring(ind + 2);
+                    if (val.EndsWith("\n"))
+                    {
+                        val = val.Substring(0, val.Length - 1);
+                    }
+                    NotDict.Add(key, val);
+                }
+            }
+            foreach (var item in NotDict.Keys)
+            {
+                if (!checkedListBox4.CheckedItems.Contains(item))
+                    selectedItems.Add(NotDict[item]);
+                //if (NotItems.Contains(item))
+                //{
+                //    selectedItems.Add(NotDict[item]);
+                //}
             }
             foreach (object selectedItem in checkedListBox5.CheckedItems)
             {
@@ -102,8 +132,9 @@ namespace MyProductModel
                 temp += value + ",";
             }
 
-            File.WriteAllText("../../facts.txt", temp);
-            Initialize();
+             File.WriteAllText("../../facts.txt", temp);
+            //File.WriteAllText("../../result.txt", temp);
+           Initialize();
 
         }
         private void button1_Click(object sender, EventArgs e)

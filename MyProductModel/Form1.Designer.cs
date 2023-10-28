@@ -72,26 +72,26 @@
             // 
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
-            "2_ядра",
-            "4_ядра",
-            "6_ядер",
-            "8_ядер",
+            "16_ядер",
             "12_ядер",
-            "16_ядер"});
-            this.checkedListBox1.Location = new System.Drawing.Point(146, 77);
+            "8_ядер",
+            "6_ядер",
+            "4_ядра",
+            "2_ядра "});
+            this.checkedListBox1.Location = new System.Drawing.Point(146, 64);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(139, 106);
+            this.checkedListBox1.Size = new System.Drawing.Size(139, 123);
             this.checkedListBox1.TabIndex = 3;
             this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(86, 58);
+            this.label2.Location = new System.Drawing.Point(143, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(256, 16);
+            this.label2.Size = new System.Drawing.Size(126, 16);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Как вы хотите использовать ноутбук?";
+            this.label2.Text = "Количество ядер?";
             // 
             // checkedListBox2
             // 
@@ -102,19 +102,19 @@
             "2050",
             "1650",
             "встроенная"});
-            this.checkedListBox2.Location = new System.Drawing.Point(374, 96);
+            this.checkedListBox2.Location = new System.Drawing.Point(374, 77);
             this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(165, 89);
+            this.checkedListBox2.Size = new System.Drawing.Size(165, 106);
             this.checkedListBox2.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(371, 77);
+            this.label3.Location = new System.Drawing.Point(371, 45);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(220, 16);
+            this.label3.Size = new System.Drawing.Size(133, 16);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Сколько должен держать заряд?";
+            this.label3.Text = "Какая видеокарта?";
             // 
             // checkedListBox3
             // 
@@ -124,7 +124,7 @@
             "3000$",
             "2000$",
             "1000$"});
-            this.checkedListBox3.Location = new System.Drawing.Point(600, 96);
+            this.checkedListBox3.Location = new System.Drawing.Point(600, 77);
             this.checkedListBox3.Name = "checkedListBox3";
             this.checkedListBox3.Size = new System.Drawing.Size(165, 89);
             this.checkedListBox3.TabIndex = 7;
@@ -132,31 +132,37 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(611, 77);
+            this.label4.Location = new System.Drawing.Point(611, 45);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(207, 16);
+            this.label4.Size = new System.Drawing.Size(134, 16);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Какую фирму предпочитаете?";
+            this.label4.Text = "Каков ваш бюджет?";
             // 
             // checkedListBox4
             // 
             this.checkedListBox4.FormattingEnabled = true;
             this.checkedListBox4.Items.AddRange(new object[] {
-            "есть_в_наличии",
-            "наличие_не_важно"});
-            this.checkedListBox4.Location = new System.Drawing.Point(156, 257);
+            "подсветка_клавиатуры",
+            "есть_ОС",
+            "два_доп_usb",
+            "запасной_аккумулятор",
+            "гарнитура",
+            "охлаждающая_подставка",
+            "чехол",
+            "сумка_для_ноутбука"});
+            this.checkedListBox4.Location = new System.Drawing.Point(156, 223);
             this.checkedListBox4.Name = "checkedListBox4";
-            this.checkedListBox4.Size = new System.Drawing.Size(165, 72);
+            this.checkedListBox4.Size = new System.Drawing.Size(219, 157);
             this.checkedListBox4.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(153, 238);
+            this.label5.Location = new System.Drawing.Point(153, 204);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(189, 16);
+            this.label5.Size = new System.Drawing.Size(195, 16);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Выберите размер ноутбука";
+            this.label5.Text = "Дополнительные параметры";
             // 
             // checkedListBox5
             // 
@@ -167,30 +173,32 @@
             "16ГБ",
             "8ГБ",
             "4ГБ"});
-            this.checkedListBox5.Location = new System.Drawing.Point(848, 111);
+            this.checkedListBox5.Location = new System.Drawing.Point(844, 83);
             this.checkedListBox5.Name = "checkedListBox5";
-            this.checkedListBox5.Size = new System.Drawing.Size(152, 89);
+            this.checkedListBox5.Size = new System.Drawing.Size(152, 106);
             this.checkedListBox5.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(866, 77);
+            this.label6.Location = new System.Drawing.Point(866, 64);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(232, 16);
+            this.label6.Size = new System.Drawing.Size(99, 16);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Какой процеесор предпочитаете?";
+            this.label6.Text = "Сколько ОЗУ?";
             // 
             // checkedListBox6
             // 
             this.checkedListBox6.FormattingEnabled = true;
             this.checkedListBox6.Items.AddRange(new object[] {
-            "Много памяти ",
-            "Средняя память",
-            "Мало памяти"});
-            this.checkedListBox6.Location = new System.Drawing.Point(416, 257);
+            "2TB",
+            "1TB",
+            "512MB",
+            "256MB",
+            "128MB"});
+            this.checkedListBox6.Location = new System.Drawing.Point(416, 223);
             this.checkedListBox6.Name = "checkedListBox6";
-            this.checkedListBox6.Size = new System.Drawing.Size(165, 72);
+            this.checkedListBox6.Size = new System.Drawing.Size(165, 106);
             this.checkedListBox6.TabIndex = 13;
             // 
             // checkedListBox7
@@ -208,7 +216,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(414, 238);
+            this.label7.Location = new System.Drawing.Point(413, 204);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(167, 16);
             this.label7.TabIndex = 15;
