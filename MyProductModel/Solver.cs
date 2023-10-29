@@ -14,7 +14,7 @@ namespace MyProductModel
     internal class Solver
     {
 
-        Facts facts { get; set; }
+        public Facts facts { get; set; }
         Productions rules { get; set; }
 
         TaskManager tasks { get; set; }
@@ -151,6 +151,11 @@ namespace MyProductModel
 
         public bool ReverseSolve(string t)
         {
+            bool f1 = false;
+            bool f2 = false;
+            bool f3 = false;
+            bool f4 = false;
+            HashSet<string> ff = new HashSet<string>();
             if (!rules.ProductionDict.ContainsKey(rules.GetByName(t)) || facts.FactsList.Count == 0)
                 return false;
             var r = rules.ProductionDict[rules.GetByName(t)];
@@ -166,10 +171,22 @@ namespace MyProductModel
 
                 if (facts.IsFact(s))
                 {
+                    if (facts.F1.Contains(s))
+                        f1 = true;
+                    if (facts.F2.Contains(s))
+                        f2 = true;
+                    if (facts.F3.Contains(s))
+                        f3 = true;
+                    if (facts.F4.Contains(s))
+                        f4 = true;
+                    if (facts.FF.Contains(s))
+                    {
+                        ff.Add(s);
+                    }
                     Console.WriteLine(s);
                     Path.Add(tup.Item2);
                 }
-                if (facts.FactsList.Count == Path.Count)
+                if (f1 && f2 && f3 && f4 && (ff.Count == facts.FF.Count))
                 {
                     return true;
                 }
@@ -295,6 +312,7 @@ namespace MyProductModel
                 {
                     if (ReverseSolve(t))
                     {
+                        Logs.Add(t+ "\n");
                         //Console.WriteLine("ReverseSolve");
                         // Console.WriteLine("Task " + t + " was solved");
                         PrettyPrint();

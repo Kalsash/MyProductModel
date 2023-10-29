@@ -16,6 +16,11 @@ namespace MyProductModel
     public partial class Form1 : Form
     {
         int IsForward = 0;
+        HashSet<string> F1 = new HashSet<string>();
+        HashSet<string> F2 = new HashSet<string>();
+        HashSet<string> F3 = new HashSet<string>();
+        HashSet<string> F4 = new HashSet<string>();
+        HashSet<string> FF = new HashSet<string>();
         public Form1()
         {
             InitializeComponent();
@@ -30,6 +35,7 @@ namespace MyProductModel
             Productions ps = new Productions("../../rules.txt");
             TaskManager tm = new TaskManager("../../tasks.txt");
              Solver s = new Solver(facts, ps, tm);
+            s.facts.GroupFacts(F1,F2,F3,F4,FF);
             s.Run(IsForward);
            
         }
@@ -65,18 +71,27 @@ namespace MyProductModel
 
             foreach (object selectedItem in checkedListBox1.CheckedItems)
             {
+                F1.Add(selectedItem.ToString());
                 selectedItems.Add(selectedItem);
             }
             foreach (object selectedItem in checkedListBox2.CheckedItems)
             {
+                F2.Add(selectedItem.ToString());
                 selectedItems.Add(selectedItem);
             }
             foreach (object selectedItem in checkedListBox3.CheckedItems)
             {
+                F3.Add(selectedItem.ToString());
                 selectedItems.Add(selectedItem);
             }
             foreach (object selectedItem in checkedListBox4.CheckedItems)
             {
+                FF.Add(selectedItem.ToString());
+                selectedItems.Add(selectedItem);
+            }
+            foreach (object selectedItem in checkedListBox5.CheckedItems)
+            {
+                F4.Add(selectedItem.ToString());
                 selectedItems.Add(selectedItem);
             }
 
@@ -106,10 +121,7 @@ namespace MyProductModel
                 if (!checkedListBox4.CheckedItems.Contains(item))
                     selectedItems.Add(NotDict[item]);
             }
-            foreach (object selectedItem in checkedListBox5.CheckedItems)
-            {
-                selectedItems.Add(selectedItem);
-            }
+
             foreach (object selectedItem in checkedListBox6.CheckedItems)
             {
                 if (selectedItem.ToString() == "Обратный")

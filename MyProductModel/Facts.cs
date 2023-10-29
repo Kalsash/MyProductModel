@@ -10,6 +10,11 @@ namespace MyProductModel
     public class Facts
     {
         public List<string> FactsList { get; }
+        public HashSet<string> F1 = new HashSet<string>();
+        public HashSet<string> F2 = new HashSet<string>();
+        public HashSet<string> F3 = new HashSet<string>();
+        public HashSet<string> F4 = new HashSet<string>();
+        public HashSet<string> FF = new HashSet<string>();
 
         public Facts(string filePath)
         {
@@ -47,8 +52,17 @@ namespace MyProductModel
             if (!IsFact(fact))
             {
                 FactsList.Add(fact);
-            }      
+            }
         }
+        public void GroupFacts(HashSet<string> f1, HashSet<string> f2,
+            HashSet<string> f3, HashSet<string> f4, HashSet<string> ff)
+            {
+            F1 = f1;
+            F2 = f2; 
+            F3 = f3;
+            F4 = f4;
+            FF= ff;
+            }
 
         public void PrintFacts()
         {
