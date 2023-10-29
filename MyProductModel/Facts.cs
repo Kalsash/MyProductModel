@@ -28,6 +28,7 @@ namespace MyProductModel
                     line = line.Replace(" ", "");
                     string[] factsSplit = line.Split(',');
                     facts.AddRange(factsSplit);
+                    facts.Remove("");
                 }
             }
 

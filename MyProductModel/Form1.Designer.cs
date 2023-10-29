@@ -191,11 +191,8 @@
             // 
             this.checkedListBox6.FormattingEnabled = true;
             this.checkedListBox6.Items.AddRange(new object[] {
-            "2TB",
-            "1TB",
-            "512MB",
-            "256MB",
-            "128MB"});
+            "Прямой",
+            "Обратный"});
             this.checkedListBox6.Location = new System.Drawing.Point(416, 223);
             this.checkedListBox6.Name = "checkedListBox6";
             this.checkedListBox6.Size = new System.Drawing.Size(165, 106);
@@ -218,9 +215,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(413, 204);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(167, 16);
+            this.label7.Size = new System.Drawing.Size(150, 16);
             this.label7.TabIndex = 15;
-            this.label7.Text = "Выберите объем памяти";
+            this.label7.Text = "Выберите тип вывода";
             // 
             // label8
             // 

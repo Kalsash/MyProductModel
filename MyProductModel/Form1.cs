@@ -105,16 +105,12 @@ namespace MyProductModel
             {
                 if (!checkedListBox4.CheckedItems.Contains(item))
                     selectedItems.Add(NotDict[item]);
-                //if (NotItems.Contains(item))
-                //{
-                //    selectedItems.Add(NotDict[item]);
-                //}
             }
             foreach (object selectedItem in checkedListBox5.CheckedItems)
             {
                 selectedItems.Add(selectedItem);
             }
-            foreach (object selectedItem in checkedListBox1.CheckedItems)
+            foreach (object selectedItem in checkedListBox6.CheckedItems)
             {
                 if (selectedItem.ToString() == "Обратный")
                 {

@@ -148,29 +148,38 @@ namespace MyProductModel
             return 0;
         }
 
-        
+
         public bool ReverseSolve(string t)
         {
-            if (!rules.ProductionDict.ContainsKey(t) || facts.FactsList.Count == 0)
+            if (!rules.ProductionDict.ContainsKey(rules.GetByName(t)) || facts.FactsList.Count == 0)
                 return false;
-            var r = rules.ProductionDict[t];
+            var r = rules.ProductionDict[rules.GetByName(t)];
             Queue<(string, string)> q = new Queue<(string, string)>();
             HashSet<string> Visited = new HashSet<string>();
-            
+            Path.Clear();
             var path = t;
             q.Enqueue((t, path));
             while (q.Count != 0)
             {
                 var tup = q.Dequeue();
                 var s = tup.Item1;
-                var prod = rules.ProductionDict[s];
-                var pt = tup.Item2;
 
                 if (facts.IsFact(s))
                 {
-                    Path.Add(pt);
+                    Console.WriteLine(s);
+                    Path.Add(tup.Item2);
+                }
+                if (facts.FactsList.Count == Path.Count)
+                {
                     return true;
                 }
+                if (rules.GetByName(s) == 0)
+                {
+                    continue;
+                }
+                string temp = "";
+                var prod = rules.ProductionDict[rules.GetByName(s)];
+                var pt = tup.Item2;
                 foreach (var con in prod.Conclusions)
                 {
                     foreach (var c in con)
@@ -182,10 +191,34 @@ namespace MyProductModel
                         }
                     }
                 }
-            }
-            
+                int k = 1;
+                while (rules.GetByName(s, k) != 0)
+                {
+                    prod = rules.ProductionDict[rules.GetByName(s, k)];
+                    pt = tup.Item2;
+                    if (temp == pt)
+                        break;
+                    k++;
+                    foreach (var con in prod.Conclusions)
+                    {
+                        foreach (var c in con)
+                        {
+                            if (!Visited.Contains(c))
+                            {
+                                Visited.Add(c);
+                                q.Enqueue((c, pt + "," + c));
+                            }
+                        }
+                    }
 
-            return false; 
+                }
+
+
+
+            }
+
+
+            return false;
         }
         public bool ForwardingSolve()
         {
@@ -222,15 +255,20 @@ namespace MyProductModel
         }
         void PrettyPrint()
         {
-            char[] charArray = Path.First().ToCharArray();
-            Array.Reverse(charArray);
-            var t = new string(charArray);
-           // Console.WriteLine(t);
-            var tt = t.Split(',');
-            for (int i = 0; i < tt.Length-1; i++)
+            foreach (var c in Path)
             {
-                Console.WriteLine(tt[i] + " => "+ tt[i+1]);
-                facts.AddFact(tt[i]);
+                //char[] charArray = Path.First().ToCharArray();
+                char[] charArray = c.ToCharArray();
+                // Array.Reverse(charArray);
+                var t = new string(charArray);
+                // Console.WriteLine(t);
+                var tt = t.Split(',');
+                for (int i = 0; i < tt.Length - 1; i++)
+                {
+                    Logs.Add(tt[i] + " => " + tt[i + 1] + "\n");    
+                    Console.WriteLine(tt[i] + " => " + tt[i + 1]);
+                    //facts.AddFact(tt[i]);
+                }
             }
             Path.Clear();
         }
@@ -251,15 +289,29 @@ namespace MyProductModel
             }
 
             else
-            //    if (ReverseSolve(t))
-            //{
-            //    Console.WriteLine("ReverseSolve");
-            //    Console.WriteLine("Task " + t + " was solved");
-            //    PrettyPrint();
-            //    // Console.WriteLine(Path.First());
-            //    facts.AddFact(t);
-            //    tasks.RemoveTask(t);
-            //}
+            {
+                Logs.Add("ReverseSolve started..." +"\n");
+                foreach (var t in tasks.Tasks)
+                {
+                    if (ReverseSolve(t))
+                    {
+                        //Console.WriteLine("ReverseSolve");
+                        // Console.WriteLine("Task " + t + " was solved");
+                        PrettyPrint();
+                        // Console.WriteLine(Path.First());
+                        // facts.AddFact(t);
+                        // tasks.RemoveTask(t);
+                        Result.Add(t);
+                    }
+                }
+                Logs.Add(Result.Count.ToString());
+                var temp = "";
+                foreach (var x in Logs)  
+                    temp += x;
+                File.WriteAllText("../../result.txt", temp);
+            }
+           
+
             Console.WriteLine("End");
 
         }

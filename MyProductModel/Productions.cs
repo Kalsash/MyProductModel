@@ -9,8 +9,8 @@ namespace MyProductModel
 {
     internal class Productions
     {
-        public Dictionary<string, Production> ProductionDict{ get; } = new Dictionary<string, Production>();
-
+        public Dictionary<int, Production> ProductionDict { get; } = new Dictionary<int, Production>();
+        int k = 1;
         public Productions(string filePath)
         {
             LoadRules(filePath);
@@ -24,9 +24,7 @@ namespace MyProductModel
                 while ((line = rules.ReadLine()) != null)
                 {
                     if (line == "")
-                    {
                         break;
-                    }
                     line = line.Replace(" ", "");
                     int ind = line.IndexOf('=');
                     string key = line.Substring(0, ind);
@@ -40,22 +38,48 @@ namespace MyProductModel
                 }
             }
         }
+        public int GetByName(string s, int k)
+        {
 
+            foreach (var item in ProductionDict)
+            {
+                if (item.Value.Name == s)
+                {
+                    if (k == 0)
+                        return item.Key;
+                    k--;
+                }
+            }
+            return 0;
+        }
+        public int GetByName(string s)
+        {
+
+            foreach (var item in ProductionDict)
+            {
+                if (item.Value.Name == s)
+                {
+
+                    return item.Key;
+                }
+            }
+            return 0;
+        }
         public void AddProd(string name, string[] con)
         {
-            if (ProductionDict.ContainsKey(name))
+            if (ProductionDict.ContainsKey(k))
             {
-                ProductionDict[name].AddConclusion(con);
+                ProductionDict[k].AddConclusion(con);
             }
             else
             {
-                ProductionDict.Add(name, new Production(name, con));
+                ProductionDict.Add(k++, new Production(name, con));
             }
-           
+
         }
         public void ProdPrint()
         {
-            foreach (Production p in ProductionDict.Values) 
+            foreach (Production p in ProductionDict.Values)
             { p.Print(); }
             Console.WriteLine();
         }
