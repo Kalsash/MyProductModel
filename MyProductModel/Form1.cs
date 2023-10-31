@@ -73,7 +73,7 @@ namespace MyProductModel
 
             foreach (object selectedItem in checkedListBox1.CheckedItems)
             {
-                F1.Add(selectedItem.ToString());
+                F1.Add(selectedItem.ToString().Replace(" ", ""));
                 selectedItems.Add(selectedItem);
             }
             foreach (object selectedItem in checkedListBox2.CheckedItems)
