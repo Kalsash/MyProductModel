@@ -41,9 +41,7 @@
             this.checkedListBox5 = new System.Windows.Forms.CheckedListBox();
             this.label6 = new System.Windows.Forms.Label();
             this.checkedListBox6 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox7 = new System.Windows.Forms.CheckedListBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -193,40 +191,19 @@
             this.checkedListBox6.Items.AddRange(new object[] {
             "Прямой",
             "Обратный"});
-            this.checkedListBox6.Location = new System.Drawing.Point(416, 223);
+            this.checkedListBox6.Location = new System.Drawing.Point(468, 232);
             this.checkedListBox6.Name = "checkedListBox6";
             this.checkedListBox6.Size = new System.Drawing.Size(165, 106);
             this.checkedListBox6.TabIndex = 13;
             // 
-            // checkedListBox7
-            // 
-            this.checkedListBox7.FormattingEnabled = true;
-            this.checkedListBox7.Items.AddRange(new object[] {
-            "Включается мгновенно",
-            "Включается за минуту",
-            "Включается больше двух минут"});
-            this.checkedListBox7.Location = new System.Drawing.Point(614, 257);
-            this.checkedListBox7.Name = "checkedListBox7";
-            this.checkedListBox7.Size = new System.Drawing.Size(249, 72);
-            this.checkedListBox7.TabIndex = 14;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(413, 204);
+            this.label7.Location = new System.Drawing.Point(465, 204);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(150, 16);
             this.label7.TabIndex = 15;
             this.label7.Text = "Выберите тип вывода";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(612, 238);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(266, 16);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Насколько быстро должен включаться?";
             // 
             // button1
             // 
@@ -234,13 +211,13 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(272, 40);
             this.button1.TabIndex = 17;
-            this.button1.Text = "Запустить прямой вывод";
+            this.button1.Text = "Запустить вывод";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(869, 411);
+            this.button2.Location = new System.Drawing.Point(709, 344);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(272, 40);
             this.button2.TabIndex = 18;
@@ -255,9 +232,7 @@
             this.ClientSize = new System.Drawing.Size(1227, 822);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.checkedListBox7);
             this.Controls.Add(this.checkedListBox6);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.checkedListBox5);
@@ -292,9 +267,7 @@
         private System.Windows.Forms.CheckedListBox checkedListBox5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckedListBox checkedListBox6;
-        private System.Windows.Forms.CheckedListBox checkedListBox7;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }
