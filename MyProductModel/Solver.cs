@@ -168,7 +168,7 @@ namespace MyProductModel
         //        var tup = q.Dequeue();
         //        var s = tup.Item1;
 
-        //        if (facts.IsFact(s))
+        //        if (facts.IsFact(s)&& !facts.NotF.Contains(s))
         //        {
         //            if (facts.F1.Contains(s))
         //                f1 = true;
@@ -277,7 +277,7 @@ namespace MyProductModel
                 }
                 else
                 {
-                    if (facts.IsFact(s))
+                    if (facts.IsFact(s) && !facts.NotF.Contains(s))
                     {
                         if (facts.F1.Contains(s))
                             f1 = true;

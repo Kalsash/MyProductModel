@@ -15,6 +15,7 @@ namespace MyProductModel
         public HashSet<string> F3 = new HashSet<string>();
         public HashSet<string> F4 = new HashSet<string>();
         public HashSet<string> FF = new HashSet<string>();
+        public HashSet<string> NotF = new HashSet<string>();
 
         public Facts(string filePath)
         {

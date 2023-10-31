@@ -21,6 +21,7 @@ namespace MyProductModel
         HashSet<string> F3 = new HashSet<string>();
         HashSet<string> F4 = new HashSet<string>();
         HashSet<string> FF = new HashSet<string>();
+        HashSet<string> NotF = new HashSet<string>();
         public Form1()
         {
             InitializeComponent();
@@ -36,6 +37,7 @@ namespace MyProductModel
             TaskManager tm = new TaskManager("../../tasks.txt");
              Solver s = new Solver(facts, ps, tm);
             s.facts.GroupFacts(F1,F2,F3,F4,FF);
+            s.facts.NotF = NotF;
             s.Run(IsForward);
            
         }
@@ -118,6 +120,7 @@ namespace MyProductModel
             }
             foreach (var item in NotDict.Keys)
             {
+                NotF.Add(NotDict[item]);
                 if (!checkedListBox4.CheckedItems.Contains(item))
                     selectedItems.Add(NotDict[item]);
             }
