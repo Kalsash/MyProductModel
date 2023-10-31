@@ -10,8 +10,6 @@ Predator4100 => GeForce4070
 GeForce4070 => 4070
 Predator4100 => AMDRyzen9
 AMDRyzen9 => 16_ядер
-Predator4100LimitedEdition
-Predator4100LimitedEdition => Predator4100
 Predator4100Large
 Predator4100Large => Predator4100
 MsiTitanGT77Cute
@@ -24,9 +22,109 @@ MsiTitanGT77 => IntelCorei9
 IntelCorei9 => 16_ядер
 MsiTitanGT77Pro
 MsiTitanGT77Pro => MsiTitanGT77
-Found 5 laptops
+Slealth14Add
+Slealth14Add => Slealth14
+Slealth14 => 2000$-3000$
+2000$-3000$ => 3000$
+Slealth14 => 32ГБ
+Slealth14 => GeForce3050
+GeForce3050 => 3050
+Slealth14 => IntelCorei7
+IntelCorei7 => 12_ядер
+Slealth14Pro
+Slealth14Pro => Slealth14
+Slealth14Base
+Slealth14Base => Slealth14
+AsusGameTufGreat
+AsusGameTufGreat => AsusGameTuf
+AsusGameTuf => 2000$-3000$
+AsusGameTuf => 32ГБ
+AsusGameTuf => GeForce3050
+AsusGameTuf => AMDRyzen7
+AMDRyzen7 => 12_ядер
+AsusGameTufLight
+AsusGameTufLight => AsusGameTuf
+AsusGameTufLarge
+AsusGameTufLarge => AsusGameTuf
+LenovoFX203Pro
+LenovoFX203Pro => LenovoFX203
+LenovoFX203 => 1000$-2000$
+1000$-2000$ => 2000$
+LenovoFX203 => 16ГБ
+LenovoFX203 => GeForce2050
+GeForce2050 => 2050
+LenovoFX203 => IntelCorei5
+IntelCorei5 => 8_ядер
+LenovoFX203Base
+LenovoFX203Base => LenovoFX203
+HuaweiMateBookBase
+HuaweiMateBookBase => HuaweiMateBook
+HuaweiMateBook => 1000$-2000$
+HuaweiMateBook => 16ГБ
+HuaweiMateBook => GeForce2050
+HuaweiMateBook => AMDRyzen5
+AMDRyzen5 => 8_ядер
+HuaweiMateBookBasePro
+HuaweiMateBookBasePro => HuaweiMateBook
+HuaweiMateBookOS
+HuaweiMateBookOS => HuaweiMateBook
+Corebook14Pro
+Corebook14Pro => Corebook14
+Corebook14 => 0$-1000$
+0$-1000$ => 1000$
+Corebook14 => 8ГБ
+Corebook14 => GeForce1650
+GeForce1650 => 1650
+Corebook14 => IntelCorei3
+IntelCorei3 => 4_ядра
+Corebook14Base
+Corebook14Base => Corebook14
+Corebook14OS
+Corebook14OS => Corebook14
+AcerExtensa15Base
+AcerExtensa15Base => AcerExtensa15
+AcerExtensa15 => 0$-1000$
+AcerExtensa15 => 8ГБ
+AcerExtensa15 => GeForce1650
+AcerExtensa15 => AMDRyzen3
+AMDRyzen3 => 4_ядра
+AcerExtensa15Pro
+AcerExtensa15Pro => AcerExtensa15
+AcerExtensa15OS
+AcerExtensa15OS => AcerExtensa15
+LenovoIdeaPadBase
+LenovoIdeaPadBase => LenovoIdeaPad
+LenovoIdeaPad => 0$-1000$
+LenovoIdeaPad => 4ГБ
+LenovoIdeaPad => встроенная
+LenovoIdeaPad => AMDFX6300
+AMDFX6300 => 6_ядер
+LenovoIdeaPadPro
+LenovoIdeaPadPro => LenovoIdeaPad
+LenovoIdeaPadOC
+LenovoIdeaPadOC => LenovoIdeaPad
+Found 24 laptops
 Predator4100Pro
-Predator4100LimitedEdition
 Predator4100Large
 MsiTitanGT77Cute
 MsiTitanGT77Pro
+Slealth14Add
+Slealth14Pro
+Slealth14Base
+AsusGameTufGreat
+AsusGameTufLight
+AsusGameTufLarge
+LenovoFX203Pro
+LenovoFX203Base
+HuaweiMateBookBase
+HuaweiMateBookBasePro
+HuaweiMateBookOS
+Corebook14Pro
+Corebook14Base
+Corebook14OS
+AcerExtensa15Base
+AcerExtensa15Pro
+AcerExtensa15OS
+LenovoIdeaPadBase
+LenovoIdeaPadPro
+LenovoIdeaPadOC

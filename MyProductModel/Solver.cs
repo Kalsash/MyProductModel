@@ -147,95 +147,95 @@ namespace MyProductModel
             }
             return 0;
         }
-        //public bool ReverseSolve(string t)
-        //{
-        //    bool f1 = false;
-        //    bool f2 = false;
-        //    bool f3 = false;
-        //    bool f4 = false;
-        //    HashSet<string> ff = new HashSet<string>();
-        //    if (!rules.ProductionDict.ContainsKey(rules.GetByName(t)) || facts.FactsList.Count == 0)
-        //        return false;
-        //    var r = rules.ProductionDict[rules.GetByName(t)];
+        public bool ReverseSolve2(string t)
+        {
+            bool f1 = false;
+            bool f2 = false;
+            bool f3 = false;
+            bool f4 = false;
+            HashSet<string> ff = new HashSet<string>();
+            if (!rules.ProductionDict.ContainsKey(rules.GetByName(t)) || facts.FactsList.Count == 0)
+                return false;
+            var r = rules.ProductionDict[rules.GetByName(t)];
 
-        //    Queue<(string, string)> q = new Queue<(string, string)>();
-        //    HashSet<string> Visited = new HashSet<string>();
-        //    Path.Clear();
-        //    var path = t;
-        //    q.Enqueue((t, path));
-        //    while (q.Count != 0)
-        //    {
-        //        var tup = q.Dequeue();
-        //        var s = tup.Item1;
+            Queue<(string, string)> q = new Queue<(string, string)>();
+            HashSet<string> Visited = new HashSet<string>();
+            Path.Clear();
+            var path = t;
+            q.Enqueue((t, path));
+            while (q.Count != 0)
+            {
+                var tup = q.Dequeue();
+                var s = tup.Item1;
 
-        //        if (facts.IsFact(s)&& !facts.NotF.Contains(s))
-        //        {
-        //            if (facts.F1.Contains(s))
-        //                f1 = true;
-        //            if (facts.F2.Contains(s))
-        //                f2 = true;
-        //            if (facts.F3.Contains(s))
-        //                f3 = true;
-        //            if (facts.F4.Contains(s))
-        //                f4 = true;
-        //            if (facts.FF.Contains(s))
-        //            {
-        //                ff.Add(s);
-        //            }
-        //            Console.WriteLine(s);
-        //            Path.Add(tup.Item2);
-        //        }
-        //        if (f1 && f2 && f3 && f4 && (ff.Count == facts.FF.Count))
-        //        {
-        //            return true;
-        //        }
-        //        if (rules.GetByName(s) == 0)
-        //        {
-        //            continue;
-        //        }
-        //        string temp = "";
-        //        var prod = rules.ProductionDict[rules.GetByName(s)];
-        //        var pt = tup.Item2;
-        //        foreach (var con in prod.Conclusions)
-        //        {
-        //            foreach (var c in con)
-        //            {
-        //                if (!Visited.Contains(c))
-        //                {
-        //                    Visited.Add(c);
-        //                    q.Enqueue((c, pt + "," + c));
-        //                }
-        //            }
-        //        }
-        //        int k = 1;
-        //        while (rules.GetByName(s, k) != 0)
-        //        {
-        //            prod = rules.ProductionDict[rules.GetByName(s, k)];
-        //            pt = tup.Item2;
-        //            if (temp == pt)
-        //                break;
-        //            k++;
-        //            foreach (var con in prod.Conclusions)
-        //            {
-        //                foreach (var c in con)
-        //                {
-        //                    if (!Visited.Contains(c))
-        //                    {
-        //                        Visited.Add(c);
-        //                        q.Enqueue((c, pt + "," + c));
-        //                    }
-        //                }
-        //            }
+                if (facts.IsFact(s) && !facts.NotF.Contains(s))
+                {
+                    if (facts.F1.Contains(s))
+                        f1 = true;
+                    if (facts.F2.Contains(s))
+                        f2 = true;
+                    if (facts.F3.Contains(s))
+                        f3 = true;
+                    if (facts.F4.Contains(s))
+                        f4 = true;
+                    if (facts.FF.Contains(s))
+                    {
+                        ff.Add(s);
+                    }
+                    Console.WriteLine(s);
+                    Path.Add(tup.Item2);
+                }
+                if (f1 && f2 && f3 && f4 && (ff.Count == facts.FF.Count))
+                {
+                    return true;
+                }
+                if (rules.GetByName(s) == 0)
+                {
+                    continue;
+                }
+                string temp = "";
+                var prod = rules.ProductionDict[rules.GetByName(s)];
+                var pt = tup.Item2;
+                foreach (var con in prod.Conclusions)
+                {
+                    foreach (var c in con)
+                    {
+                        if (!Visited.Contains(c))
+                        {
+                            Visited.Add(c);
+                            q.Enqueue((c, pt + "," + c));
+                        }
+                    }
+                }
+                int k = 1;
+                while (rules.GetByName(s, k) != 0)
+                {
+                    prod = rules.ProductionDict[rules.GetByName(s, k)];
+                    pt = tup.Item2;
+                    if (temp == pt)
+                        break;
+                    k++;
+                    foreach (var con in prod.Conclusions)
+                    {
+                        foreach (var c in con)
+                        {
+                            if (!Visited.Contains(c))
+                            {
+                                Visited.Add(c);
+                                q.Enqueue((c, pt + "," + c));
+                            }
+                        }
+                    }
 
-        //        }
-
-
-
-        //    }
+                }
 
 
-        //    return false;
-        //}
+
+            }
+
+
+            return false;
+        }
 
         public bool ReverseSolve(string t)
         {
